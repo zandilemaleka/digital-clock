@@ -5,9 +5,8 @@ let minutes = now.getMinutes();
 let seconds = now.getSeconds();
 
 
-//convert to 24 hour format
-let ampm = hours >= 12 ? 'PM' : 'AM';
-hours = hours % 12 || 12;
+//AM/PM format
+let ampm = hours >= 12 ? "PM" : "AM";
 
 //add leading zeros
 hours = hours.toString().padStart(2, '0');
@@ -19,7 +18,7 @@ const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric
 const dateString = now.toLocaleDateString(undefined, options);
 
 
-document.getElementById('time').textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
 document.getElementById('ampm').textContent = ampm;
 document.getElementById('date').textContent = dateString;
 }
