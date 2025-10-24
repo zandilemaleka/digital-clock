@@ -18,3 +18,4 @@ document.getElementById('time').textContent = `${hours}:${minutes}:${seconds} ${
 document.getElementById('ampm').textContent = ampm;
 }
 UpdateClock();
+setInterval(UpdateClock, 1000);
