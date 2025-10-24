@@ -13,5 +13,8 @@ hours = hours % 12 || 12;
 hours = hours.toString().padStart(2, '0');
 minutes = minutes.toString().padStart(2, '0');
 seconds = seconds.toString().padStart(2, '0');
+
+document.getElementById('time').textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+document.getElementById('ampm').textContent = ampm;
 }
 UpdateClock();
